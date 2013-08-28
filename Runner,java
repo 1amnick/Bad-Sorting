@@ -1,0 +1,35 @@
+public class Runner
+{
+	static int[] numbers = {175,4,27,182,12,91,225,102};
+	static int[] test5 = {13, 7, 18, 25, 5};
+	public static void main(String[] args)
+	{
+		//record starting time (millis)
+
+		long s_time = System.currentTimeMillis();
+
+		// call method in Class
+
+		int[] result = Method.run(test5);
+
+		// Record ending time
+
+		long e_time = System.currentTimeMillis();
+
+		// Get total time (millis)
+
+		long time = e_time - s_time;
+
+		//
+
+		System.out.println("The time taken is " + time);
+
+		System.out.println("The Result is: ");
+		for(int i = 0; i< result.length; i++){
+			System.out.print(result[i] + ", ");
+		}
+		System.out.println("");
+		System.out.println("Expected:");
+		System.out.println("4, 12, 27, 91, 102, 175, 182, 225");
+	}
+}
